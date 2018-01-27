@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Safe bash settings
+# -e            Exit on command fail
+# -u            Exit on unset variable
+# -o pipefail   Set error if piped command has error code
+set -eu -o pipefail
+
+DIR=$(git rev-parse --absolute-git-dir)
+TEMP=$(mktemp)
+
+cd "${DIR}"
+
+# Cleanup temp file on exit
+function finish {
+    [ -f "${TEMP}" ] && rm "${TEMP}"
+}
+trap finish EXIT
+
+# If existing job is in progress kill it
+if [ -f "${DIR}/tags.pid" ] ; then
+    PID=$(cat "${DIR}/tags.pid")
+    kill "${PID}" || true
+fi
+
+(cd ../ && git ls-files --recurse-submodules) | sed -e 's#^#../#' | ctags -L - -f "${TEMP}" &
+PID="$!"
+echo "${PID}" > "${DIR}/tags.pid"
+wait "${PID}" && \
+    mv "${TEMP}" "${DIR}/tags" && \
+rm "${DIR}/tags.pid"

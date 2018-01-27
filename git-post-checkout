@@ -1,0 +1,3 @@
+#!/bin/sh
+#apply this to .git/hooks/post-checkout in all git repos
+~/dotfiles/ctags-update >/dev/null 2>&1 &
