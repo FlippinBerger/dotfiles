@@ -16,6 +16,11 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'fcpg/vim-orbital'
 Plug 'xero/sourcerer'
 Plug 'morhetz/gruvbox'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Valloric/YouCompleteMe'
+
 
 call plug#end()
 
@@ -41,6 +46,9 @@ set tabstop=4
 set wrap!
 set expandtab
 
+"allow switching between buffers without annoying you need to save message
+set hidden
+
 set laststatus=2
 set backspace=indent,eol,start
 let g:airline_powerline_fonts = 1
@@ -51,6 +59,10 @@ let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
 
 let mapleader = ','
+
+"shift between buffers
+map <Tab> :bn<CR>
+map <S-Tab> :bp<CR>
 
 "Show options for ctags
 nnoremap <c-]> :tjump <C-R><C-W><cr>
