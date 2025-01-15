@@ -8,8 +8,6 @@ vim.wo.relativenumber = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
-vim.o.termguicolors = true
-
 vim.o.scrolloff = 8
 
 vim.o.updatetime = 50
