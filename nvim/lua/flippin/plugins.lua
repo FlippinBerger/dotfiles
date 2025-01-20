@@ -7,7 +7,8 @@ require("lazy").setup({
     -- todo highlighting
     {
         "folke/todo-comments.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {}
     },
     {
         'numToStr/Comment.nvim',
@@ -50,16 +51,46 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
     -- some color stuff
-    { "rose-pine/neovim",     name = "rose-pine" },
-    { 'catppuccin/nvim',      name = 'catppuccin' },
-    { "dgox16/oldworld.nvim", name = "oldworld" },
+    -- gotos
+    {
+        "folke/tokyonight.nvim",
+        name = 'tokyonight',
+        opts = {
+            style = "night",
+            transparent = true,
+        },
+    },
+    { "rose-pine/neovim",      name = "rose-pine" },
+    { 'catppuccin/nvim',       name = 'catppuccin' },
+
+    -- trying some simple themes
+    { "dgox16/oldworld.nvim",  name = "oldworld" },
+    { "rebelot/kanagawa.nvim", name = 'kanagawa' },
+
+    --playing with some real funky colors here
+    {
+        'maxmx03/fluoromachine.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            local fm = require 'fluoromachine'
+
+            fm.setup {
+                glow = true,
+                theme = 'retrowave', -- can be retrowave, fluoromachine, or delta
+                transparent = true,
+            }
+        end
+    },
+    { "scottmckendry/cyberdream.nvim", name = 'cyberdream' },
+
     -- file explorer/edit buffer
     {
         'stevearc/oil.nvim',
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    { 'echasnovski/mini.nvim', version = false },
+    { 'echasnovski/mini.nvim',         version = false },
     -- join or split long lines on semantic points set by treesitter
     { 'wansmer/treesj' },
     {
