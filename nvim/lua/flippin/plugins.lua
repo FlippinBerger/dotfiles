@@ -4,6 +4,11 @@ require("lazy").setup({
         tag = "0.1.6",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
     -- todo highlighting
     {
         "folke/todo-comments.nvim",
@@ -91,8 +96,6 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     { 'echasnovski/mini.nvim',         version = false },
-    -- join or split long lines on semantic points set by treesitter
-    { 'wansmer/treesj' },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
