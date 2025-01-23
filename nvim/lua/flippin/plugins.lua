@@ -24,6 +24,15 @@ require("lazy").setup({
     { "nvim-tree/nvim-tree.lua",                dependencies = { "nvim-tree/nvim-web-devicons" } },
     -- git
     { "tpope/vim-fugitive" },
+    {
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",  -- required
+            "sindrets/diffview.nvim", -- optional - Diff integration
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+        config = true
+    },
     -- formatter
     {
         'stevearc/conform.nvim',
