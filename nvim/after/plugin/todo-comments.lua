@@ -1,5 +1,5 @@
-require('todo-comments').setup()
+require("todo-comments").setup()
 
-local builtin = require("telescope.builtin")
+-- local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>td", ":TodoQuickFix<cr>", {})

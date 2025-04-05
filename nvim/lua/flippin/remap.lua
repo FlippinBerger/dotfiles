@@ -24,6 +24,7 @@ end)
 --buffers
 -- close current buffer
 vim.keymap.set("n", "<leader>c", ":bd<cr>")
+vim.keymap.set("n", "<leader>C", ":%bd|e#|bd#<cr>")
 
 vim.keymap.set("n", "<leader>bn", ":bn<cr>")
 vim.keymap.set("n", "<leader>bp", ":bp<cr>")
