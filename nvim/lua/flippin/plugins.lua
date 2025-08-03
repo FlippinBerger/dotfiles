@@ -4,6 +4,15 @@ require("lazy").setup({
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+	-- debugger
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = { "igorlfs/nvim-dap-view" },
+	},
+	{
+		"leoluz/nvim-dap-go",
+		dependencies = { "mfussenegger/nvim-dap" },
+	},
 	-- todo highlighting
 	{
 		"folke/todo-comments.nvim",
