@@ -18,7 +18,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("n", "<leader>p", function()
-    vim.lsp.buf.format()
+	vim.lsp.buf.format()
 end)
 
 --buffers
