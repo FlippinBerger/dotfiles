@@ -6,7 +6,7 @@ vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "eslint", "jsonls", "ts_ls", "volar" },
+    ensure_installed = { "lua_ls", "rust_analyzer", "eslint", "jsonls", "ts_ls" },
 })
 
 local nvimlsp = require("lspconfig")
@@ -31,20 +31,20 @@ local cmp = require("cmp")
 require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
-	sources = {
-		{ name = "nvim_lsp" },
-	},
-	mapping = cmp.mapping.preset.insert({
-		-- Enter key confirms completion item
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
-		-- Ctrl + space triggers completion menu
-		["<C-Space>"] = cmp.mapping.complete(),
-	}),
-	snippet = {
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
-	},
+    sources = {
+        { name = "nvim_lsp" },
+    },
+    mapping = cmp.mapping.preset.insert({
+        -- Enter key confirms completion item
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        -- Ctrl + space triggers completion menu
+        ["<C-Space>"] = cmp.mapping.complete(),
+    }),
+    snippet = {
+        expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+        end,
+    },
 })
 
 -- lspconfig.gdscript.setup({

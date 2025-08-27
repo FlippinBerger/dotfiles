@@ -139,7 +139,7 @@ require("lazy").setup({
 			},
 			gitbrowse = { enabled = false },
 			lazygit = { enabled = false },
-			picker = { enabled = true },
+			picker = { enabled = true, hidden = true },
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
