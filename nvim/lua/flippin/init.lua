@@ -1,4 +1,4 @@
-require("flippin.remap")
-require("flippin.settings")
-require("flippin.lazy")
-require("flippin.plugins")
+require("flippin.core.remap")
+require("flippin.core.settings")
+require("flippin.core.lazy")
+-- require("flippin.plugins")
