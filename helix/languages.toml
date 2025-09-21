@@ -1,0 +1,14 @@
+[[language]]
+name = "go"
+
+[language.debugger]
+name = "delve"
+transport = "stdio"
+command = "dlv"
+args  = ["debug"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+program = "{workspace_root}"
+args = {mode = "debug", program = "{0}"}

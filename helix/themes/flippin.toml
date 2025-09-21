@@ -1,0 +1,4 @@
+inherits = "tokyonight"
+
+"ui.cursor.primary" = {bg = "magenta"}
+"ui.cursor" = {bg = "light-cyan"}

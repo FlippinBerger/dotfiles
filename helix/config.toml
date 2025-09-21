@@ -1,0 +1,19 @@
+# theme = "tokyonight"
+# theme = "rose_pine"
+theme = "flippin"
+
+[editor]
+line-number = "relative"
+# end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.gutters]
+layout = ["diff", "line-numbers", "spacer"]
+
