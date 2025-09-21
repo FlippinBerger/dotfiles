@@ -1,3 +1,21 @@
 theme = Catppuccin Mocha
-cursor-color = #efbf04
+
+# Mouse
+mouse-hide-while-typing = true
+
 font-feature = -calt
+
+# nav splits
+keybind = super+shift+j=goto_split:down
+keybind = super+shift+k=goto_split:up
+keybind = super+shift+l=goto_split:right
+keybind = super+shift+h=goto_split:left
+
+# size splits
+keybind = ctrl+alt+j=resize_split:down,20
+keybind = ctrl+alt+k=resize_split:up,20
+keybind = ctrl+alt+l=resize_split:right,20
+keybind = ctrl+alt+h=resize_split:left,20
+
+# quick term
+keybind = global:cmd+backquote=toggle_quick_terminal
