@@ -15,7 +15,7 @@ return {
 			enabled = true,
 			timeout = 3000,
 		},
-		gitbrowse = { enabled = false },
+		gitbrowse = { enabled = true },
 		lazygit = { enabled = true },
 		picker = { enabled = true, hidden = true },
 		quickfile = { enabled = true },
@@ -23,11 +23,6 @@ return {
 		scroll = { enabled = true },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
-		styles = {
-			notification = {
-				-- wo = { wrap = true } -- Wrap notifications
-			},
-		},
 	},
 	keys = {
 		{
@@ -381,7 +376,7 @@ return {
 			desc = "Select Scratch Buffer",
 		},
 		{
-			"<leader>n",
+			"<leader>N",
 			function()
 				Snacks.notifier.show_history()
 			end,
@@ -439,7 +434,7 @@ return {
 			mode = { "n", "t" },
 		},
 		{
-			"<leader>N",
+			"<leader>NN",
 			desc = "Neovim News",
 			function()
 				Snacks.win({

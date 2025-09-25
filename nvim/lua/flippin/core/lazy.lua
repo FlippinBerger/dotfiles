@@ -17,4 +17,7 @@ require("lazy").setup({
 	},
 	-- spec = "flippin.plugins",
 	change_detection = { notifiy = false },
+	{ "nvim-treesitter/nvim-treesitter", branch = "main", lazy = false, build = ":TSUpdate" },
 })
+
+vim.keymap.set("n", "<leader>l", ":Lazy<cr>", { desc = "Lazy" })
