@@ -32,6 +32,20 @@ return {
 			end,
 			desc = "Lazygit",
 		},
+		{
+			"<leader>gb",
+			function()
+				Snacks.git.blame_line()
+			end,
+			desc = "Git Blame",
+		},
+		{
+			"<leader>gB",
+			function()
+				Snacks.gitbrowse.open()
+			end,
+			desc = "Git Browse",
+		},
 		-- Top Pickers & Explorer
 		{
 			"<leader><space>",
@@ -389,13 +403,13 @@ return {
 			end,
 			desc = "Delete Buffer",
 		},
-		{
-			"<leader>cR",
-			function()
-				Snacks.rename.rename_file()
-			end,
-			desc = "Rename File",
-		},
+		-- {
+		-- 	"<leader>cR",
+		-- 	function()
+		-- 		Snacks.rename.rename_file()
+		-- 	end,
+		-- 	desc = "Rename File",
+		-- },
 		{
 			"<leader>un",
 			function()

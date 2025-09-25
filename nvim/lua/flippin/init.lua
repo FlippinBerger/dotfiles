@@ -4,7 +4,7 @@ require("flippin.core.lazy")
 -- require("flippin.plugins")
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "go", "lua", "markdown", "sql", "rust", "zig" },
+	pattern = { "go", "lua", "markdown", "sql", "rust", "zig", "terraform" },
 	callback = function()
 		vim.treesitter.start()
 		vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
