@@ -8,8 +8,8 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "save" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move block up" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move block down" })
 
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+-- vim.keymap.set("n", "n", "nzzzv")
+-- vim.keymap.set("n", "N", "Nzzzv")
 
 -- keep cursor in the middle when page jumping
 -- vim.keymap.set("n", "<C-f>", "<C-f>zz")
